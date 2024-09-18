@@ -1,0 +1,441 @@
+[
+  {
+    "model": "users.user",
+    "pk": "2@test.ru",
+    "fields": {
+      "password": "password",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-09-16T00:10:38.270Z",
+      "full_name": null,
+      "image": "",
+      "vk_link": null,
+      "vk_id": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": "3@test.ru",
+    "fields": {
+      "password": "password",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-09-16T00:10:38.270Z",
+      "full_name": null,
+      "image": "",
+      "vk_link": "https://vk.com/bossofcreeps",
+      "vk_id": 7,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": "email@test.ru",
+    "fields": {
+      "password": "password",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-09-16T00:10:37.856Z",
+      "full_name": null,
+      "image": "",
+      "vk_link": "https://vk.com/bossofcreeps",
+      "vk_id": 7,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "events.eventtag",
+    "pk": 1,
+    "fields": {
+      "name": "name"
+    }
+  },
+  {
+    "model": "events.eventtag",
+    "pk": 2,
+    "fields": {
+      "name": "second"
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 1,
+    "fields": {
+      "name": "a",
+      "description": "description",
+      "start_date": "2023-12-31T21:00:00Z",
+      "finish_date": "2023-12-31T21:00:00Z",
+      "image": "",
+      "address": "address",
+      "latitude": 1.0,
+      "longitude": 1.0,
+      "organization": 1,
+      "vk_chat_id": 123,
+      "vk_chat_link": "http://test.ru",
+      "extra": {
+        "search": [
+          "description",
+          "a"
+        ]
+      },
+      "tags": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 2,
+    "fields": {
+      "name": "b",
+      "description": "description",
+      "start_date": "2023-12-31T21:00:00Z",
+      "finish_date": "2024-01-01T21:00:00Z",
+      "image": "",
+      "address": "address",
+      "latitude": 1.0,
+      "longitude": 1.0,
+      "organization": 2,
+      "vk_chat_id": 123,
+      "vk_chat_link": "http://test.ru",
+      "extra": {
+        "search": [
+          "description",
+          "b"
+        ]
+      },
+      "tags": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 3,
+    "fields": {
+      "name": "c",
+      "description": "description",
+      "start_date": "2023-12-31T21:00:00Z",
+      "finish_date": "2024-01-02T21:00:00Z",
+      "image": "",
+      "address": "address",
+      "latitude": 1.0,
+      "longitude": 1.0,
+      "organization": 1,
+      "vk_chat_id": 123,
+      "vk_chat_link": "http://test.ru",
+      "extra": {
+        "search": [
+          "c",
+          "description"
+        ]
+      },
+      "tags": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 4,
+    "fields": {
+      "name": "abc",
+      "description": "description",
+      "start_date": "2023-12-31T21:00:00Z",
+      "finish_date": "2024-01-03T21:00:00Z",
+      "image": "",
+      "address": "address",
+      "latitude": 1.0,
+      "longitude": 1.0,
+      "organization": 1,
+      "vk_chat_id": 123,
+      "vk_chat_link": "http://test.ru",
+      "extra": {
+        "search": [
+          "description",
+          "abc"
+        ]
+      },
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 5,
+    "fields": {
+      "name": "bc",
+      "description": "description",
+      "start_date": "2023-12-31T21:00:00Z",
+      "finish_date": "2024-01-04T21:00:00Z",
+      "image": "",
+      "address": "address",
+      "latitude": 1.0,
+      "longitude": 1.0,
+      "organization": 1,
+      "vk_chat_id": 123,
+      "vk_chat_link": "http://test.ru",
+      "extra": {
+        "search": [
+          "description",
+          "bc"
+        ]
+      },
+      "tags": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 6,
+    "fields": {
+      "name": "Всемирные Игры Дружбы",
+      "description": "Всемирные Игры Дружбы — первые мультиспортивные соревнования под эгидой Международного \n    Движения Дружбы, которые включают в себя выступления по 33 летним видам спорта. Уникальное событие станет \n    пространством для межкультурного диалога, в основе которого — высокие идеалы спорта, принципы открытости \n    и взаимоуважения. Для организации и проведения Игр в двух городах планируется привлечь более 7000 \n    волонтёров, которые окажут поддержку по более 20 функциональным направлениям деятельности на более чем 33 \n    объектах соревнований.",
+      "start_date": "2023-12-31T18:00:00Z",
+      "finish_date": "2023-12-31T18:00:00Z",
+      "image": "",
+      "address": "address",
+      "latitude": 1.0,
+      "longitude": 1.0,
+      "organization": 1,
+      "vk_chat_id": 1,
+      "vk_chat_link": "",
+      "extra": {
+        "search": [
+          "пространств",
+          "станет",
+          "диалог",
+          "двух",
+          "дружб",
+          "бол",
+          "принцип",
+          "направлен",
+          "котор",
+          "функциональн",
+          "включа",
+          "высок",
+          "международн",
+          "планир",
+          "проведен",
+          "игр",
+          "поддержк",
+          "город",
+          "организац",
+          "соревнован",
+          "всемирн",
+          "мультиспортивн",
+          "привлеч",
+          "33",
+          "себ",
+          "событ",
+          "движен",
+          "7000",
+          "эгид",
+          "20",
+          "летн",
+          "взаимоуважен",
+          "уникальн",
+          "перв",
+          "окажут",
+          "открыт",
+          "деятельн",
+          "межкультурн",
+          "основ",
+          "вид",
+          "объект",
+          "спорт",
+          "идеал",
+          "выступлен",
+          "волонтер"
+        ]
+      }
+    },
+    "tags": []
+  },
+  {
+    "model": "events.ticket",
+    "pk": 1,
+    "fields": {
+      "event": 1,
+      "user": "email@test.ru",
+      "created_at": "2024-09-16T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "events.ticket",
+    "pk": 2,
+    "fields": {
+      "event": 2,
+      "user": "email@test.ru",
+      "created_at": "2024-09-16T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "events.assistanceoffer",
+    "pk": 1,
+    "fields": {
+      "event": 1,
+      "organization": 1,
+      "text": "text",
+      "created_at": "2024-09-16T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "events.assistanceoffer",
+    "pk": 2,
+    "fields": {
+      "event": 2,
+      "organization": 1,
+      "text": "data",
+      "created_at": "2024-09-16T00:00:00.000Z"
+    }
+  },
+  {
+    "model": "organizations.organization",
+    "pk": 1,
+    "fields": {
+      "full_name": "Полное название",
+      "short_name": "Короткое название",
+      "address": "Адрес",
+      "phone": "Телефон",
+      "email": "Email",
+      "description": "Описание",
+      "image": "foo1.jpg",
+      "ogrn": "ОГРН",
+      "inn": "ИНН",
+      "kpp": "КПП",
+      "okpo": "ОКПО",
+      "director_full_name": "Дир ФИО",
+      "director_inn": "Дир ИНН",
+      "activities": "Активности",
+      "reg_date": "2020-01-01",
+      "users": [
+        "2@test.ru",
+        "email@test.ru"
+      ]
+    }
+  },
+  {
+    "model": "organizations.organization",
+    "pk": 2,
+    "fields": {
+      "full_name": "Полное название",
+      "short_name": "Короткое название",
+      "address": "Адрес",
+      "phone": "Телефон",
+      "email": "Email",
+      "description": "Описание",
+      "ogrn": "ОГРН",
+      "inn": "ИНН",
+      "kpp": "КПП",
+      "okpo": "ОКПО",
+      "director_full_name": "Дир ФИО",
+      "director_inn": "Дир ИНН",
+      "activities": "Активности",
+      "reg_date": "2020-01-01",
+      "image": "foo2.jpg",
+      "users": [
+        "2@test.ru",
+        "3@test.ru"
+      ]
+    }
+  },
+  {
+    "model": "news.newstag",
+    "pk": 1,
+    "fields": {
+      "name": "name"
+    }
+  },
+  {
+    "model": "news.newstag",
+    "pk": 2,
+    "fields": {
+      "name": "second"
+    }
+  },
+  {
+    "model": "news.news",
+    "pk": 1,
+    "fields": {
+      "name": "a",
+      "description": "description",
+      "organization": 1,
+      "created_at": "2024-09-16T00:00:00.000Z",
+      "image": "",
+      "tags": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "news.news",
+    "pk": 2,
+    "fields": {
+      "name": "b",
+      "description": "description",
+      "organization": 1,
+      "created_at": "2024-09-16T00:00:00.000Z",
+      "image": "",
+      "tags": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "news.news",
+    "pk": 3,
+    "fields": {
+      "name": "c",
+      "description": "description",
+      "organization": 1,
+      "created_at": "2024-09-16T00:00:00.000Z",
+      "image": "",
+      "tags": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "news.news",
+    "pk": 4,
+    "fields": {
+      "name": "abc",
+      "description": "description",
+      "organization": 1,
+      "created_at": "2024-09-16T00:00:00.000Z",
+      "image": "",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "news.news",
+    "pk": 5,
+    "fields": {
+      "name": "bc",
+      "description": "description",
+      "organization": 1,
+      "created_at": "2024-09-16T00:00:00.000Z",
+      "image": "",
+      "tags": [
+        1
+      ]
+    }
+  }
+]

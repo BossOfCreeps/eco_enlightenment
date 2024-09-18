@@ -1,0 +1,38 @@
+repos:
+  - repo: local
+    hooks:
+      - id: black
+        name: Run black
+        entry: black
+        args: [ --line-length=120 ]
+        types: [ python ]
+        language: system
+
+      - id: isort
+        name: Run isort
+        entry: isort
+        args: [ --line-length=120 ]
+        types: [ python ]
+        language: system
+
+      - id: autoflake
+        name: Run autoflake
+        entry: autoflake
+        types: [ python ]
+        language: system
+        require_serial: true
+        args:
+          - "--exclude=*/__init__.py"
+          - "--remove-all-unused-imports"
+          - "--in-place"
+          - "--expand-star-imports"
+          - "--remove-duplicate-keys"
+          - "--remove-unused-variables"
+
+      - id: flake8
+        name: Run flake8
+        entry: flake8
+        types: [ python ]
+        language: system
+        args:
+          - "--exclude=*/migrations/*"
