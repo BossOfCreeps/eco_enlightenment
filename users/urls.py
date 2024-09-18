@@ -3,7 +3,7 @@ from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.routers import DefaultRouter
 from rest_framework_social_oauth2.views import TokenView
 
-from users.views import LogoutView, RegistrationView, UserView, DownloadStatisticsView
+from users.views import DownloadStatisticsView, LogoutView, RegistrationView, UserView
 
 router = DefaultRouter()
 

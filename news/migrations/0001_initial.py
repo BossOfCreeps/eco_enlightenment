@@ -16,44 +16,20 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name="NewsTag",
             fields=[
-                (
-                    "id",
-                    models.BigAutoField(
-                        auto_created=True,
-                        primary_key=True,
-                        serialize=False,
-                        verbose_name="ID",
-                    ),
-                ),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID",),),
                 ("name", models.TextField()),
             ],
-            options={
-                "verbose_name": "Тэг новости",
-                "verbose_name_plural": "Тэги новостей",
-            },
+            options={"verbose_name": "Тэг новости", "verbose_name_plural": "Тэги новостей",},
         ),
         migrations.CreateModel(
             name="News",
             fields=[
-                (
-                    "id",
-                    models.BigAutoField(
-                        auto_created=True,
-                        primary_key=True,
-                        serialize=False,
-                        verbose_name="ID",
-                    ),
-                ),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID",),),
                 ("name", models.TextField(verbose_name="Название новости")),
                 ("description", models.TextField(verbose_name="Описание новости")),
                 ("full_text", models.TextField(verbose_name="Полный текст")),
                 ("created_at", models.DateTimeField(auto_now_add=True)),
-                (
-                    "image",
-                    models.FileField(
-                        blank=True, null=True, upload_to="", verbose_name="Изображение"
-                    ),
-                ),
+                ("image", models.FileField(blank=True, null=True, upload_to="", verbose_name="Изображение"),),
                 (
                     "organization",
                     models.ForeignKey(
@@ -62,14 +38,8 @@ class Migration(migrations.Migration):
                         verbose_name="Организация",
                     ),
                 ),
-                (
-                    "tags",
-                    models.ManyToManyField(to="news.newstag", verbose_name="Тэги"),
-                ),
+                ("tags", models.ManyToManyField(to="news.newstag", verbose_name="Тэги"),),
             ],
-            options={
-                "verbose_name": "Новость",
-                "verbose_name_plural": "Новости",
-            },
+            options={"verbose_name": "Новость", "verbose_name_plural": "Новости",},
         ),
     ]

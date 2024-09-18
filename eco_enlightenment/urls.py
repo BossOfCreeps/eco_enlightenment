@@ -8,9 +8,9 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     #
     path("users/", include(("users.urls", "users"))),
-    path("organizations/", include(('organizations.urls', 'organizations'))),
-    path("events/", include(('events.urls', 'events'))),
-    path("news/", include(('news.urls', 'news'))),
+    path("organizations/", include(("organizations.urls", "organizations"))),
+    path("events/", include(("events.urls", "events"))),
+    path("news/", include(("news.urls", "news"))),
     #
     path("schema.yaml", SpectacularAPIView.as_view(), name="schema"),
     path("swagger/", SpectacularSwaggerView.as_view(url_name="schema"), name="swagger-ui"),

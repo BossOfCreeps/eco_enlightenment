@@ -1,4 +1,4 @@
-from typing import Tuple, Optional
+from typing import Optional, Tuple
 
 from django.conf import settings
 from vk_api import VkApi

@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from events.models import Event, EventTag, Ticket, AssistanceOffer
+from events.models import AssistanceOffer, Event, EventTag, Ticket
 from organizations.serializers import OrganizationSerializer
 from services import SiteParseEnum
 from users.serializers import UserShortSerializer

@@ -4,8 +4,8 @@ from datetime import datetime
 import requests
 from bs4 import BeautifulSoup
 
-from services.utils import get_key_from_link
 from services.site_parsers.utils import EventParserTemplate
+from services.utils import get_key_from_link
 
 
 def parse_dobro_ru(link: str) -> EventParserTemplate:

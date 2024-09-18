@@ -10,7 +10,7 @@ from events.serializers import OrganizationParseRequestSerializer
 from organizations.filters import OrganizationFilter
 from organizations.models import Organization
 from organizations.serializers import OrganizationSerializer
-from services import parse_organization_by_inn, create_organizations_excel
+from services import create_organizations_excel, parse_organization_by_inn
 
 
 class OrganizationViewSet(ReadOnlyModelViewSet, CreateModelMixin):
@@ -35,5 +35,5 @@ class OrganizationViewSet(ReadOnlyModelViewSet, CreateModelMixin):
         result = HttpResponse(
             create_organizations_excel(Organization.objects.all()).read(), content_type="application/excel"
         )
-        result["Content-Disposition"] = f"attachment; filename=data.xlsx"
+        result["Content-Disposition"] = "attachment; filename=data.xlsx"
         return result

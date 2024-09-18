@@ -16,15 +16,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name="Organization",
             fields=[
-                (
-                    "id",
-                    models.BigAutoField(
-                        auto_created=True,
-                        primary_key=True,
-                        serialize=False,
-                        verbose_name="ID",
-                    ),
-                ),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID",),),
                 ("full_name", models.TextField(verbose_name="Полное название")),
                 ("short_name", models.TextField(verbose_name="Короткое название")),
                 ("address", models.TextField(verbose_name="Адрес")),
@@ -39,22 +31,9 @@ class Migration(migrations.Migration):
                 ("phone", models.TextField(verbose_name="Телефон")),
                 ("email", models.EmailField(max_length=254, verbose_name="Email")),
                 ("description", models.TextField(verbose_name="Описание")),
-                (
-                    "image",
-                    models.FileField(
-                        blank=True, null=True, upload_to="", verbose_name="Изображение"
-                    ),
-                ),
-                (
-                    "users",
-                    models.ManyToManyField(
-                        related_name="organizations", to=settings.AUTH_USER_MODEL
-                    ),
-                ),
+                ("image", models.FileField(blank=True, null=True, upload_to="", verbose_name="Изображение"),),
+                ("users", models.ManyToManyField(related_name="organizations", to=settings.AUTH_USER_MODEL),),
             ],
-            options={
-                "verbose_name": "Организация",
-                "verbose_name_plural": "Организации",
-            },
+            options={"verbose_name": "Организация", "verbose_name_plural": "Организации",},
         ),
     ]

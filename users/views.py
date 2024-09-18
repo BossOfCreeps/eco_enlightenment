@@ -8,7 +8,7 @@ from rest_framework.views import APIView
 
 from services import create_users_excel
 from users.models import User
-from users.serializers import UserShortSerializer, UserFullSerializer
+from users.serializers import UserFullSerializer, UserShortSerializer
 
 
 class UserView(RetrieveAPIView):
@@ -25,7 +25,7 @@ class DownloadStatisticsView(RetrieveAPIView):
 
     def retrieve(self, request, *args, **kwargs):
         result = HttpResponse(create_users_excel(User.objects.all()).read(), content_type="application/excel")
-        result["Content-Disposition"] = f"attachment; filename=data.xlsx"
+        result["Content-Disposition"] = "attachment; filename=data.xlsx"
         return result
 
 

@@ -18,50 +18,20 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name="EventTag",
             fields=[
-                (
-                    "id",
-                    models.BigAutoField(
-                        auto_created=True,
-                        primary_key=True,
-                        serialize=False,
-                        verbose_name="ID",
-                    ),
-                ),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID",),),
                 ("name", models.TextField()),
             ],
-            options={
-                "verbose_name": "Тэг мероприятия",
-                "verbose_name_plural": "Тэги мероприятий",
-            },
+            options={"verbose_name": "Тэг мероприятия", "verbose_name_plural": "Тэги мероприятий",},
         ),
         migrations.CreateModel(
             name="Event",
             fields=[
-                (
-                    "id",
-                    models.BigAutoField(
-                        auto_created=True,
-                        primary_key=True,
-                        serialize=False,
-                        verbose_name="ID",
-                    ),
-                ),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID",),),
                 ("name", models.TextField(verbose_name="Название мероприятия")),
                 ("description", models.TextField(verbose_name="Описание")),
-                (
-                    "start_date",
-                    models.DateTimeField(verbose_name="Дата и время начала"),
-                ),
-                (
-                    "finish_date",
-                    models.DateTimeField(verbose_name="Дата и время окончания"),
-                ),
-                (
-                    "image",
-                    models.FileField(
-                        blank=True, null=True, upload_to="", verbose_name="Изображение"
-                    ),
-                ),
+                ("start_date", models.DateTimeField(verbose_name="Дата и время начала"),),
+                ("finish_date", models.DateTimeField(verbose_name="Дата и время окончания"),),
+                ("image", models.FileField(blank=True, null=True, upload_to="", verbose_name="Изображение"),),
                 ("address", models.TextField(verbose_name="Адрес")),
                 ("latitude", models.FloatField(verbose_name="Широта")),
                 ("longitude", models.FloatField(verbose_name="Долгота")),
@@ -78,10 +48,7 @@ class Migration(migrations.Migration):
                         verbose_name="Организация",
                     ),
                 ),
-                (
-                    "tags",
-                    models.ManyToManyField(to="events.eventtag", verbose_name="Тэги"),
-                ),
+                ("tags", models.ManyToManyField(to="events.eventtag", verbose_name="Тэги"),),
             ],
             options={
                 "verbose_name": "Мероприятие",
@@ -92,15 +59,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name="AssistanceOffer",
             fields=[
-                (
-                    "id",
-                    models.BigAutoField(
-                        auto_created=True,
-                        primary_key=True,
-                        serialize=False,
-                        verbose_name="ID",
-                    ),
-                ),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID",),),
                 ("text", models.TextField()),
                 ("created_at", models.DateTimeField(auto_now_add=True)),
                 (
@@ -120,30 +79,17 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "verbose_name": "Предложение помощи",
-                "verbose_name_plural": "Предложения помощи",
-            },
+            options={"verbose_name": "Предложение помощи", "verbose_name_plural": "Предложения помощи",},
         ),
         migrations.CreateModel(
             name="Ticket",
             fields=[
-                (
-                    "id",
-                    models.BigAutoField(
-                        auto_created=True,
-                        primary_key=True,
-                        serialize=False,
-                        verbose_name="ID",
-                    ),
-                ),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID",),),
                 ("created_at", models.DateTimeField(auto_now_add=True)),
                 (
                     "event",
                     models.ForeignKey(
-                        on_delete=django.db.models.deletion.CASCADE,
-                        related_name="tickets",
-                        to="events.event",
+                        on_delete=django.db.models.deletion.CASCADE, related_name="tickets", to="events.event",
                     ),
                 ),
                 (
@@ -155,9 +101,6 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "verbose_name": "Билет",
-                "verbose_name_plural": "Билеты",
-            },
+            options={"verbose_name": "Билет", "verbose_name_plural": "Билеты",},
         ),
     ]

@@ -4,8 +4,8 @@ from datetime import datetime
 import requests
 from django.conf import settings
 
-from services.utils import get_key_from_link
 from services.site_parsers.utils import EventParserTemplate
+from services.utils import get_key_from_link
 
 
 def parse_leader_id(link: str) -> EventParserTemplate:

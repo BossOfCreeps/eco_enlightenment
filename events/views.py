@@ -8,26 +8,27 @@ from rest_framework.parsers import MultiPartParser
 from rest_framework.response import Response
 from rest_framework.viewsets import ReadOnlyModelViewSet
 
-from events.filters import EventFilter, TicketFilter, AssistanceOfferFilter
-from events.models import Event, EventTag, Ticket, AssistanceOffer
+from events.filters import AssistanceOfferFilter, EventFilter, TicketFilter
+from events.models import AssistanceOffer, Event, EventTag, Ticket
 from events.permissions import EventPermission
 from events.serializers import (
+    AssistanceOfferSerializer,
+    EventMapSerializer,
     EventSerializer,
     EventTagSerializer,
+    SiteParseRequestSerializer,
     TicketSerializer,
-    AssistanceOfferSerializer,
-    SiteParseRequestSerializer, EventMapSerializer,
 )
 from events.utils import mass_send_new_event
 from services import (
     SiteParseEnum,
+    create_events_excel,
     parse_dobro_ru,
     parse_leader_id,
     parse_timepad,
-    set_vk_admin_role,
     parse_vk_event,
     parse_vk_wall,
-    create_events_excel,
+    set_vk_admin_role,
 )
 
 
@@ -85,7 +86,7 @@ class EventViewSet(ReadOnlyModelViewSet, CreateModelMixin):
     @action(["get"], False, "download_statistics", "downloadstatistics")
     def download_statistics(self, request, *args, **kwargs):
         result = HttpResponse(create_events_excel(Event.objects.all()).read(), content_type="application/excel")
-        result["Content-Disposition"] = f"attachment; filename=data.xlsx"
+        result["Content-Disposition"] = "attachment; filename=data.xlsx"
         return result
 
     @extend_schema(filters=True)

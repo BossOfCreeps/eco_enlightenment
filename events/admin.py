@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from events.models import EventTag, Event, Ticket, AssistanceOffer
+from events.models import AssistanceOffer, Event, EventTag, Ticket
 
 
 @admin.register(Event)

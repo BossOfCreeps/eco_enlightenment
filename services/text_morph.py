@@ -1,4 +1,4 @@
-from nltk import SnowballStemmer, word_tokenize, download
+from nltk import SnowballStemmer, download, word_tokenize
 from pymorphy3 import MorphAnalyzer
 
 download("punkt_tab")

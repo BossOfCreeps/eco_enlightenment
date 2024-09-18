@@ -3,10 +3,10 @@ from functools import reduce
 from operator import and_
 
 import django_filters
-from django.db.models import QuerySet, Q
+from django.db.models import Q, QuerySet
 from django.utils import timezone
 
-from events.models import Event, EventTag, Ticket, AssistanceOffer
+from events.models import AssistanceOffer, Event, EventTag, Ticket
 from organizations.models import Organization
 from services import parse_text
 

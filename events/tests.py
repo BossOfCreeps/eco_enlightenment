@@ -7,7 +7,7 @@ from freezegun import freeze_time
 from parameterized import parameterized
 from rest_framework import status
 
-from events.models import Event, Ticket, AssistanceOffer
+from events.models import AssistanceOffer, Event, Ticket
 from test_utils import _APITestCase
 from users.models import User
 
@@ -599,11 +599,7 @@ class TicketTests(_APITestCase):
 
 class AssistanceOfferTests(_APITestCase):
     @parameterized.expand(
-        [
-            ({}, [(1, 1, 1), (2, 2, 1)]),
-            ({"event": 2}, [(2, 2, 1)]),
-            ({"organization": 1}, [(1, 1, 1), (2, 2, 1)]),
-        ]
+        [({}, [(1, 1, 1), (2, 2, 1)]), ({"event": 2}, [(2, 2, 1)]), ({"organization": 1}, [(1, 1, 1), (2, 2, 1)])]
     )
     def test_list(self, query, result):
         response = self.client.get(reverse("events:assistance_offers-list"), query)
